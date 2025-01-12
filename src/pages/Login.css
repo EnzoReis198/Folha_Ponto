@@ -149,3 +149,53 @@ a:hover {
     font-size: 2rem;
   }
 }
+
+.input-div.pass {
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.user-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.user-selection .btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 45%;
+}
+
+.user-selection .btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Aumenta o tamanho do botão ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras ao passar o mouse */
+}
+
+.user-selection .func-btn {
+  margin-right: 10px; /* Dá um espaço entre os botões */
+}
+
+.user-selection .adm-btn {
+  margin-left: 10px; /* Dá um espaço entre os botões */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
