@@ -1,0 +1,151 @@
+/* Estilos principais */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #2E7D32; /* Fundo verde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  animation: fadeIn 1s ease-out;
+}
+
+.img img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  object-fit: cover;
+}
+
+.login-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #FFB74D; /* Título em amarelo */
+}
+
+.input-div {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-div .i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #FFB74D; /* Ícones em amarelo */
+}
+
+.input-div .div {
+  width: 100%;
+}
+
+.input-div h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #FFB74D; /* Borda amarela ao focar no campo */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 183, 77, 0.5); /* Sombra amarela suave */
+}
+
+.input:focus + h5 {
+  color: #FFB74D; /* Cor do texto do campo em amarelo */
+}
+
+.btn {
+  background-color: #FFB74D; /* Botão com fundo amarelo */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #F57C00; /* Amarelo mais forte ao passar o mouse */
+  transform: scale(1.05);
+}
+
+a {
+  color: #FFB74D; /* Link em amarelo */
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animação de Fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .login-content {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
