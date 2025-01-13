@@ -16,7 +16,7 @@ function App() {
         <Route path="/admin/dashboard" element={<DashboardAdministrador />} />
         <Route path="/registro-ponto" element={<RegistroPonto />} />
         <Route path="/relatorios" element={<Relatorios />} />
-        <Route path="/cadastro-funcionario" element={<CadastroFuncionario />} />
+        <Route path="/cadas,.tro-funcionario" element={<CadastroFuncionario />} />
       </Routes>
     </Router>
   );

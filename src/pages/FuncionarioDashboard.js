@@ -65,6 +65,9 @@ function FuncionarioDashboard() {
     <div className="func-dashboard-container">
       {/* Barra lateral */}
       <div className={`sidebar ${isSidebarVisible ? 'visible' : ''}`}>
+      <button className="sidebar-btn" onClick={() => setActiveSection('perfil')}>
+          <FaChartBar /> Perfil
+        </button>
         <button className="sidebar-btn" onClick={() => setActiveSection('estatisticas')}>
           <FaChartBar /> Estatísticas
         </button>
@@ -73,6 +76,15 @@ function FuncionarioDashboard() {
         </button>
         <button className="sidebar-btn" onClick={() => setActiveSection('batimento')}>
           <FaClock /> Batimento de Ponto
+        </button>
+        <button className="sidebar-btn" onClick={() => setActiveSection('batimento')}>
+          Pedido de Ausência
+        </button>
+        <button className="sidebar-btn" onClick={() => setActiveSection('batimento')}>
+          Relatório de Férias
+        </button>
+        <button className="sidebar-btn" onClick={() => setActiveSection('batimento')}>
+          Configurações
         </button>
         <button className="sidebar-btn close-btn" onClick={toggleSidebar}>
           <FaTimes />
@@ -84,6 +96,7 @@ function FuncionarioDashboard() {
         {isSidebarVisible ? <FaChevronLeft /> : <FaChevronRight />}
       </button>
 
+
       <div className="dashboard-content">
         <header className="dashboard-header">
           <h2>Bem-vindo, Funcionário</h2>
@@ -91,6 +104,16 @@ function FuncionarioDashboard() {
         </header>
 
         <div className="section-content">
+        {activeSection === 'perfil' && (
+            <section className="chart-section">
+              <h3>Aqui será a parte destinada a seu perfil *EM PRODUÇÃO*</h3>
+            </section>
+          )}
+
+
+
+
+
           {activeSection === 'estatisticas' && (
             <section className="chart-section">
               <h3>Horas Trabalhadas - Última Semana</h3>
@@ -99,6 +122,8 @@ function FuncionarioDashboard() {
               </div>
             </section>
           )}
+
+
 
           {activeSection === 'historico' && (
             <section className="history-section">
@@ -126,6 +151,8 @@ function FuncionarioDashboard() {
             </section>
           )}
 
+
+
           {activeSection === 'batimento' && (
             <section className="batimento-section">
               <h3>Batimento de Ponto</h3>
@@ -137,5 +164,6 @@ function FuncionarioDashboard() {
     </div>
   );
 }
+
 
 export default FuncionarioDashboard;
